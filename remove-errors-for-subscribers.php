@@ -20,7 +20,7 @@ function wp_check_role( $role, $user_id = null ) {
 
 
 
-function my_admin_notice() {
+function sub_remove_admin_notices() {
 	if ( wp_check_role('subscriber') ) {
 
 	echo'<style>
@@ -37,4 +37,4 @@ function my_admin_notice() {
 
 	}
 }
-add_action( 'admin_notices', 'my_admin_notice' );
+add_action( 'admin_notices', 'sub_remove_admin_notices' );
